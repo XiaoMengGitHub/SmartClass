@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>主页</title>
+  
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+<!--关键词样式-->
+<link rel="stylesheet" href="dist/css/vocation.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+<!--MAP-->
+    <script src="dist/js/jquery-1.8.2.min.js"></script>
+    <script src="dist/js/raphael.js"></script>
+    <script src="dist/js/chinamapPath.js"></script>
+    <script src="dist/js/chinamap.js"></script>
+    <script src="echarts.min.js"></script>
+    <script src="plugins/jQuery/raphael-min.js"></script>
+    <script src="plugins/morris/morris.min.js"></script>
+    <script src="plugins/knob/jquery.knob.js"></script>
+
+ <style type="text/css">
+        @media screen and (max-width: 1000px) {
+        #map {
+            transform:scale(0.6, 0.6) translate(-50px, -150px);
+            }
+        }
+        #ChinaMap {
+            padding-right: 10px;
+            padding-left: -100px;
+            padding-bottom: 10px;
+            margin: 0px auto;
+            padding-top: 10px;
+            position: relative;
+            text-align: center;
+        }
+
+        #tiplayer {
+            padding-right: 5px;
+            padding-left: 5px;
+            z-index: 1000;
+            min-height: 1em;
+            background: #000;
+            max-width: 250px;
+            padding-bottom: 5px;
+            font: 12px 'Microsoft YaHei',Arial,����,Tahoma,Sans-Serif;
+            color: #fff;
+            padding-top: 5px;
+            position: absolute;
+            text-align: left;
+            word-wrap: break-word;
+            -moz-border-radius: 3px;
+            -khtml-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+    </style>
+
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini" >
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>S</b>CLS</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Smart</b>Class</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+         
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">王佳</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  王佳 - 软件工程学院
+                  <small>2011级</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="myself.html">技能</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="state.html">课堂</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="friends.html">朋友</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">个人信息</a>
+                </div>
+                <div class="pull-right">
+                  <a href="teacher.html" class="btn btn-default btn-flat">切换角色</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>王佳</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="查询...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">导航栏</li>
+        <li class="active treeview">
+          <a href="index.html">
+            <i class="fa fa-dashboard"></i> <span>主页</span>
+          </a>
+        </li>
+
+         <li class=" treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+
+            <span>课程</span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="C.html"><i class="fa fa-cubes"></i>C语言知识图谱</a></li>
+            <li><a href="time.html"><i class="fa fa-calendar-check-o"></i> 时间胶囊</a></li>
+            <li><a href="document.html"><i class="fa fa-book"></i> <span>课堂资料</span></a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-line-chart"></i> <span>职业信息</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="position.html"><i class="fa fa-pie-chart"></i> 公司岗位信息</a></li>
+            <li><a href="master.html"><i class="fa fa-laptop"></i> 考研信息</a></li>
+            <li><a href="phd.html"><i class="fa fa-laptop"></i> 读博信息</a></li>
+            <li><a href="overseas.html"><i class="fa fa-share"></i> 留学信息</a></li>
+            <li><a href="functionary.html"><i class="fa fa-edit"></i>公务员职位信息</a></li>
+            <li><a href="project.html"><i class="fa fa-table"></i> 创业现状信息</a></li>
+          </ul>
+        </li>
+
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-key"></i> <span>职业发展</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="career.html"><i class="fa fa-pie-chart"></i> 公司岗位推荐</a></li>
+            <li><a href="school.html"><i class="fa fa-share"></i> 留学推荐</a></li>
+            <li><a href="functionaryS.html"><i class="fa fa-edit"></i> 公务员职位推荐</a></li>
+            <li><a href="projectS.html"><i class="fa fa-table"></i> 创业想法评测</a></li>
+          </ul>
+        </li>
+
+        <li class=" treeview">
+          <a href="#">
+            <i class="fa fa-user"></i> <span>我的数据</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="state.html"><i class="fa fa-gamepad"></i> 课堂行为数据</a></li>
+            <li><a href="friends.html"><i class="fa fa-group"></i>社交圈</a></li>
+            <li><a href="myself.html"><i class="fa  fa-gears"></i> 技能数据</a></li>
+            <li><a href="knowledge.html"><i class="fa fa-mortar-board"></i> 知识数据</a></li>
+          </ul>
+        </li>
+        
+        <li class="header">新闻</li>
+        <li><a href="news.html"><i class="fa fa-newspaper-o"></i> <span>新闻信息
+        <span class="pull-right-container">
+              <small class="label pull-right bg-red">3</small>
+            </span></span></a>
+        
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        仪表盘
+        <small>控制面板</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li class="active">仪表盘</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <!--<h3>90分</h3>
+              <p>课上活跃值</p>-->
+              <div clas="box-body" align="center">
+                <canvas id="yibiao1" width="200" height="80" ></canvas>
+               <p style="margin:0px"><strong>已修学分90分</strong></p>
+              </div>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="state.html" class="small-box-footer">更多 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <div clas="box-body" align="center">
+              <canvas id="yibiao2" width="200" height="80" ></canvas>
+              <p style="margin:0px"><strong>当前成绩排名9</strong></p>
+            </div>
+
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="knowledge.html" class="small-box-footer">更多 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+             <!-- <h3>83分</h3>
+
+              <p>综合评分</p>-->
+              <div clas="box-body" align="center">
+              <canvas id="yibiao3" width="200" height="80" ></canvas>
+              <p style="margin:0px"><strong>本周课上活跃值80分</strong></p>
+            </div>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="myself.html" class="small-box-footer">更多<i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <!--<h3>65<sup style="font-size: 20px">%</sup></h3>
+
+              <p>职业发展</p>-->
+              <div clas="box-body" align="center">
+              <canvas id="yibiao4" width="200" height="80" ></canvas>
+              <p style="margin:0px"><strong>综合评分65分</strong></p>
+            </div>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="career.html" class="small-box-footer">更多<i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+      </div>
+
+      <div class="row">
+          <div class="col-md-12">
+            <div class="box">
+              <div class="box-header with-border">
+                <h3 class="box-title">课堂表现记录</h3>
+              </div>
+              <div class="box-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="text-center"><strong>课堂行为视频</strong></p>
+                    <div class="progress-group">
+                      <video class="col-md-12" src="001.bhd" controls="controls">视频</video>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="text-center"><strong>听课情况</strong>
+                      <div class="box-body" align="center" style="margin-top: -35px;">
+                        <canvas id="canvas2" height="300" width="450"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--video-->
+
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">课程成绩报告</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <p class="text-center">
+                    <strong>成绩及平均成绩变化</strong>
+                  </p>
+
+                  <div class="chart">
+                    <!-- Sales Chart Canvas -->
+                    <canvas id="salesChart" style="height: 180px;"></canvas>
+                  </div>
+                  <!-- /.chart-responsive -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-4">
+                  <p class="text-center">
+                    <strong>课程成绩情况</strong>
+                  </p>
+
+                  <div class="progress-group">
+                    <span class="progress-text">C语言</span>
+                    <span class="progress-number"><b>80</b>/100</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    <span class="progress-text">JAVA</span>
+                    <span class="progress-number"><b>70</b>/100</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-red" style="width: 76%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    <span class="progress-text">Python</span>
+                    <span class="progress-number"><b>60</b>/100</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-green" style="width: 60%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    <span class="progress-text">CSS</span>
+                    <span class="progress-number"><b>50</b>/100</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-yellow" style="width: 50%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- ./box-body -->
+            <div class="box-footer">
+              <div class="row">
+                <div class="col-sm-3 col-xs-6">
+                  <div class="description-block border-right">
+                    <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 70%</span>
+                    <p></p>
+                    <span class="description-text">全班C语言课程优秀率</span>
+                  </div>
+                  <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-3 col-xs-6">
+                  <div class="description-block border-right">
+                    <span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> 60%</span>
+                    <p></p>
+                    <span class="description-text">全班JAVA课程优秀率</span>
+                  </div>
+                  <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-3 col-xs-6">
+                  <div class="description-block border-right">
+                    <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 80%</span>
+                    <p></p>
+                    <span class="description-text">全班Python课程优秀率</span>
+                  </div>
+                  <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-3 col-xs-6">
+                  <div class="description-block">
+                    <span class="description-percentage text-red"><i class="fa fa-caret-down"></i> 50%</span>
+                    <p></p>
+                    <span class="description-text">全班CSS课程优秀率</span>
+                  </div>
+                  <!-- /.description-block -->
+                </div>
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.box-footer -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+
+      <!-- Main row -->
+      <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-6 connectedSortable">
+         
+
+          <div class="box box-primary">
+            <div class="box-header with-border">
+
+              <h3 class="box-title">性格</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body" align='center'>
+               <canvas id="leida" height="300" width="450"></canvas>
+            </div>
+            <!-- /.box-body-->
+          </div>
+        </section>
+        <!-- /.Left col -->
+        <!-- right col (We are only adding the ID to make the widgets sortable)-->
+        <section class="col-lg-6 connectedSortable">
+        <!-- Bar chart -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+
+              <h3 class="box-title">职业匹配</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+
+            <div class="box-body" align='center'>
+               <canvas id="barChart" height="177"></canvas>
+            </div>
+            
+            <!-- /.box-body-->
+          </div>
+          <!-- /.box -->
+          
+
+         
+         
+        </section>
+        <!-- right col -->
+      </div>
+      <!-- /.row (main row) -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1
+    </div>
+    <strong>Copyright &copy; 2016-2017 <a href="http://socog.cn">Smart Class</a>.</strong> All rights
+    reserved.
+  </footer>
+
+ 
+  
+ <div class="control-sidebar-bg"></div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+
+
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+
+
+<!-- SlimScroll 1.3.0 -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- ChartJS 1.0.1 -->
+<script src="plugins/chartjs/Chart.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard2.js"></script>
+
+
+<script>
+
+   //-------------
+    //- BAR CHART -
+    //-------------
+    var barChartCanvas = $("#barChart").get(0).getContext("2d");
+    var barChart = new Chart(barChartCanvas);
+    var barChartData =  {
+      labels: ["公司", "升学", "留学", "公务员", "创业"],
+      datasets: [
+        {
+          label: "吉林大学",
+          fillColor: "rgba(210, 214, 222, 1)",
+          strokeColor: "rgba(210, 214, 222, 1)",
+          pointColor: "rgba(210, 214, 222, 1)",
+          pointStrokeColor: "#c1c7d1",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(220,220,220,1)",
+          data: [65, 59, 88, 21, 36]
+        }
+      ]
+    };
+   /* barChartData.datasets[1].fillColor = "#00a65a";
+    barChartData.datasets[1].strokeColor = "#00a65a";
+    barChartData.datasets[1].pointColor = "#00a65a";*/
+    var barChartOptions = {
+      //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+      scaleBeginAtZero: true,
+      //Boolean - Whether grid lines are shown across the chart
+      scaleShowGridLines: true,
+      //String - Colour of the grid lines
+      scaleGridLineColor: "rgba(0,0,0,.05)",
+      //Number - Width of the grid lines
+      scaleGridLineWidth: 1,
+      //Boolean - Whether to show horizontal lines (except X axis)
+      scaleShowHorizontalLines: true,
+      //Boolean - Whether to show vertical lines (except Y axis)
+      scaleShowVerticalLines: true,
+      //Boolean - If there is a stroke on each bar
+      barShowStroke: true,
+      //Number - Pixel width of the bar stroke
+      barStrokeWidth: 2,
+      //Number - Spacing between each of the X value sets
+      barValueSpacing: 5,
+      //Number - Spacing between data sets within X values
+      barDatasetSpacing: 1,
+      //String - A legend template
+      legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+      //Boolean - whether to make the chart responsive
+      responsive: true,
+      maintainAspectRatio: true
+    };
+
+    barChartOptions.datasetFill = false;
+
+    barChart.Bar(barChartData, barChartOptions);
+
+
+</script>
+
+<script src="echarts/yibiao.js"></script>
+<script src="echarts/leida.js"></script>
+<script type="text/javascript" src="echarts/classpresenta0.js"></script>
+<script type="text/javascript" src="echarts/classpresenta1.js"></script>
+</body>
+</html>
