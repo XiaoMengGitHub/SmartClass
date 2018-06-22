@@ -1,0 +1,467 @@
+var myChart = echarts.init(document.getElementById('ciyun'));
+
+option = {
+    title: {},
+    toolbox: { },
+    tooltip: {
+              trigger: 'item', 
+              formatter: function(data) 
+              {
+                  return data.name + '<br/>' +data.seriesName + '：'+(data.value * 100)+'%'; //将小数转化为百分数显示
+               }
+          },
+    grid:{
+        x:5,
+        y:5
+    },
+    series: [{
+        name: '课程评价',
+        type: 'wordCloud',
+        //size: ['9%', '99%'],
+        sizeRange: [6, 66],
+        //textRotation: [0, 45, 90, -45],
+        rotationRange: [-45, 90],
+       // shape: 'circle',
+        textPadding: 0,
+        autoSize: {
+            enable: true,
+            minSize: 6
+        },
+        textStyle: {
+            normal: {
+                color: function() {
+                    return 'rgb(' + [
+                        Math.round(Math.random() * 160),
+                        Math.round(Math.random() * 160),
+                        Math.round(Math.random() * 160)
+                    ].join(',') + ')';
+                }
+            },
+            emphasis: {
+                shadowBlur: 10,
+                shadowColor: '#333'
+            }
+        },
+        data: [{
+            name: "Jayfee",
+            value: 666
+        }, {
+            name: "Nancy",
+            value: 520
+        }]
+    }]
+};
+
+var JosnList = [];
+
+JosnList.push({
+    name: "别拦我我要上课",
+    value: 666
+}, {
+    name: "课堂很有趣",
+    value: 520
+}, {
+    name: "超爱这门课",
+    value: "999"
+}, {
+    name: "老师很帅",
+    value: "888"
+}, {
+    name: "作业有点多",
+    value: "777"
+}, {
+    name: "选这课的人真多",
+    value: "688"
+}, {
+    name: "很有收获",
+    value: "588"
+}, {
+    name: "老师讲课很有魅力",
+    value: "516"
+}, {
+    name: "应该多点课上讨论",
+    value: "515"
+}, {
+    name: "可惜没有课件",
+    value: "483"
+}, {
+    name: "讲的很详细",
+    value: "462"
+}, {
+    name: "教室有点小",
+    value: "449"
+}, {
+    name: "有趣",
+    value: "429"
+}, {
+    name: "还想再学一遍",
+    value: "407"
+}, {
+    name: "平时要好好复习",
+    value: "406"
+}, {
+    name: "课堂笔记很重要",
+    value: "406"
+}, {
+    name: "考试题量有点大",
+    value: "386"
+}, {
+    name: "就选这课",
+    value: "385"
+}, {
+    name: "选就对了",
+    value: "375"
+}, {
+    name: "课程内容挺多",
+    value: "355"
+}, {
+    name: "考试容易挂",
+    value: "355"
+}, {
+    name: "老师讲课有点快",
+    value: "335"
+}, {
+    name: "太难了",
+    value: "324"
+}, {
+    name: "有点枯燥",
+    value: "304"
+}, {
+    name: "还可以吧",
+    value: "304"
+}, {
+    name: "没什么感觉",
+    value: "284"
+}, {
+    name: "很爱听这个课",
+    value: "284"
+}, {
+    name: "飘过",
+    value: "284"
+}, {
+    name: "就是棒",
+    value: "254"
+}, {
+    name: "老师很有魅力",
+    value: "254"
+}, {
+    name: "很少有人缺课",
+    value: "253"
+}, {
+    name: "老师有点严",
+    value: "253"
+}, {
+    name: "老师很风趣",
+    value: "223"
+}, {
+    name: "别拦我我要上课",
+    value: "223"
+}, {
+    name: "超爱计算机课程",
+    value: "223"
+}, {
+    name: "扶我起来我要写代码",
+    value: "223"
+}, {
+    name: "我有课件",
+    value: "223"
+}, {
+    name: "学分够啦",
+    value: "223"
+}, {
+    name: "3学分呢",
+    value: "223"
+}, {
+    name: "好气哟",
+    value: "223"
+}, {
+    name: "为什么不点名",
+    value: "223"
+}, {
+    name: "结构体好难",
+    value: "152"
+}, {
+    name: "只有我挂了吗",
+    value: "152"
+}, {
+    name: "哈哈哈哈",
+    value: "152"
+}, {
+    name: "为什么这么多",
+    value: "152"
+}, {
+    name: "凑字中",
+    value: "152"
+}, {
+    name: "我爱老师",
+    value: "152"
+}, {
+    name: "终于学完啦",
+    value: "152"
+}, {
+    name: "我要学分",
+    value: "152"
+}, {
+    name: "声音很好听",
+    value: "112"
+}, {
+    name: "才考了60分",
+    value: "112"
+}, {
+    name: "学弟们好好努力",
+    value: "112"
+}, {
+    name: "加油少年",
+    value: "112"
+}, {
+    name: "买本练习册",
+    value: "112"
+}, {
+    name: "软件管理不太懂",
+    value: "112"
+}, {
+    name: "老师经常留课堂作业",
+    value: "112"
+}, {
+    name: "学的好累啊",
+    value: "92"
+}, {
+    name: "词云真好玩",
+    value: "92"
+}, {
+    name: "谁能看到我的话",
+    value: "92"
+}, {
+    name: "上课好早啊",
+    value: "92"
+}, {
+    name: "课上有点困",
+    value: "92"
+}, {
+    name: "编程题挺有难度",
+    value: "92"
+}, {
+    name: "文件管理还是不太懂",
+    value: "72"
+}, {
+    name: "后人多联系啊",
+    value: "72"
+}, {
+    name: "对以后挺有用处的",
+    value: "72"
+}, {
+    name: "好好学",
+    value: "72"
+}, {
+    name: "一言不合就开车",
+    value: "71"
+}, {
+    name: "地上设施",
+    value: "71"
+}, {
+    name: "水质",
+    value: "71"
+}, {
+    name: "无水",
+    value: "71"
+}, {
+    name: "供热单位影响",
+    value: "71"
+}, {
+    name: "人行道管理",
+    value: "71"
+}, {
+    name: "主网原因",
+    value: "71"
+}, {
+    name: "集中供热",
+    value: "71"
+}, {
+    name: "客运管理",
+    value: "71"
+}, {
+    name: "国管理",
+    value: "71"
+}, {
+    name: "工业粉尘污染",
+    value: "71"
+}, {
+    name: "治安案件",
+    value: "71"
+}, {
+    name: "压力容器安全",
+    value: "71"
+}, {
+    name: "身份证管理",
+    value: "71"
+}, {
+    name: "群众健身",
+    value: "41"
+}, {
+    name: "工业排放污染",
+    value: "41"
+}, {
+    name: "破坏森林资源",
+    value: "41"
+}, {
+    name: "市场收费",
+    value: "41"
+}, {
+    name: "生产资金",
+    value: "41"
+}, {
+    name: "生产噪声",
+    value: "41"
+}, {
+    name: "农村低保",
+    value: "41"
+}, {
+    name: "劳动争议",
+    value: "41"
+}, {
+    name: "劳动合同争议",
+    value: "41"
+}, {
+    name: "劳动报酬与福利",
+    value: "41"
+}, {
+    name: "医疗事故",
+    value: "21"
+}, {
+    name: "停供",
+    value: "21"
+}, {
+    name: "基础教育",
+    value: "21"
+}, {
+    name: "职业教育",
+    value: "21"
+}, {
+    name: "物业资质管理",
+    value: "21"
+}, {
+    name: "拆迁补偿",
+    value: "21"
+}, {
+    name: "设施维护",
+    value: "21"
+}, {
+    name: "市场外溢",
+    value: "11"
+}, {
+    name: "占道经营",
+    value: "11"
+}, {
+    name: "树木管理",
+    value: "11"
+}, {
+    name: "农村基础设施",
+    value: "11"
+}, {
+    name: "无水",
+    value: "11"
+}, {
+    name: "供气质量",
+    value: "11"
+}, {
+    name: "停气",
+    value: "11"
+}, {
+    name: "市政府工作部门",
+    value: "11"
+}, {
+    name: "燃气管理",
+    value: "11"
+}, {
+    name: "市容环卫",
+    value: "11"
+}, {
+    name: "新闻传媒",
+    value: "11"
+}, {
+    name: "人才招聘",
+    value: "11"
+}, {
+    name: "市场环境",
+    value: "11"
+}, {
+    name: "行政事业收费",
+    value: "11"
+}, {
+    name: "食品安全与卫生",
+    value: "11"
+}, {
+    name: "城市交通",
+    value: "11"
+}, {
+    name: "房地产开发",
+    value: "11"
+}, {
+    name: "房屋配套问题",
+    value: "11"
+}, {
+    name: "物业服务",
+    value: "11"
+}, {
+    name: "物业管理",
+    value: "11"
+}, {
+    name: "占道",
+    value: "11"
+}, {
+    name: "园林绿化",
+    value: "11"
+}, {
+    name: "户籍管理及身份证",
+    value: "11"
+}, {
+    name: "公交运输管理",
+    value: "11"
+}, {
+    name: "公路（水路）交通",
+    value: "11"
+}, {
+    name: "房屋与图纸不符",
+    value: "11"
+}, {
+    name: "有线电视",
+    value: "11"
+}, {
+    name: "社会治安",
+    value: "11"
+}, {
+    name: "林业资源",
+    value: "11"
+}, {
+    name: "其他行政事业收费",
+    value: "11"
+}, {
+    name: "经营性收费",
+    value: "11"
+}, {
+    name: "食品安全与卫生",
+    value: "11"
+}, {
+    name: "体育活动",
+    value: "11"
+}, {
+    name: "有线电视安装及调试维护",
+    value: "11"
+}, {
+    name: "低保管理",
+    value: "11"
+}, {
+    name: "劳动争议",
+    value: "11"
+}, {
+    name: "社会福利及事务",
+    value: "11"
+}, {
+    name: "一次供水问题",
+    value: "11"
+});
+
+option.series[0].data = JosnList;
+
+myChart.setOption(option);
+
